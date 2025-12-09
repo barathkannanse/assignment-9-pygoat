@@ -24,7 +24,7 @@ jobs:
           ignore-unfixed: true
           format: 'sarif'
           output: 'trivy-results.sarif'
-          severity: 'CRITICAL'
+          severity: 'HIGH,CRITICAL'
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4.4.3
@@ -63,4 +63,3 @@ jobs:
         with:
           name: docker-scout-findings
           path: scout-report.sarif
-
